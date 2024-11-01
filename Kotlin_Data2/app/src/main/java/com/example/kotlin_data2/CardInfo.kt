@@ -49,7 +49,7 @@ import com.example.kotlin_data2.ui.theme.Kotlin_Data2Theme
 //}
 
 @Composable
-fun CardInfo(name: String, phone: String, onclickCard:()->Unit){
+fun CardInfo(name: String, phone: String, onclickCard:()->Unit, onDelete:()->Unit){
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
         onClick = onclickCard
@@ -92,16 +92,14 @@ fun CardInfo(name: String, phone: String, onclickCard:()->Unit){
                 }
             }
             IconButton(
-                onClick = {
-                    var list = ContactRepository().contacts
-                    ContactRepository().deleteContact()
-                }
+                onClick = onDelete
             ) {
                 Icon(imageVector = Icons.Filled.Delete, contentDescription = "")
             }
         }
     }
 }
+
 
 //@Preview
 //@Composable

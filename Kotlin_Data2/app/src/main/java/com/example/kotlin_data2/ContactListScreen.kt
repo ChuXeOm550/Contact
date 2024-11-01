@@ -129,7 +129,8 @@ fun ContactListScreen(navController: NavController){
                     navController.navigate(
                         Screen.Detail.route+"?id=${con.Id}"
                     )
-                })
+                },
+                    onDelete = {viewModel.deleteContact(con)})
             }
 //            item {
 //                CardInfo(name = "Phan Thảo", phone = "0785763022",{})

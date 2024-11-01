@@ -115,7 +115,9 @@ fun SearchScreen(navController: NavController){
                     navController.navigate(
                         Screen.Detail.route+"?id=${con.Id}"
                     )
-                })
+                },
+                    onDelete = {}
+                )
             }
 //            item {
 //                CardInfo(name = "Phan Thảo", phone = "0785763022",{})
